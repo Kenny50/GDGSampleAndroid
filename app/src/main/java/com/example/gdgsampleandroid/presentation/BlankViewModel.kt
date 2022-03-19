@@ -23,10 +23,5 @@ class BlankViewModel @Inject constructor(
 
     fun getString(input:String){
         //todo get string and update ui
-        viewModelScope.launch {
-            val result = selectStringUseCase(input)
-            Log.d(TAG, result)
-            _apiRequestData.postValue(result)
-        }
     }
 }

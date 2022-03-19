@@ -16,9 +16,6 @@ class FirstViewModel @Inject constructor(
 
     override fun onCleared() {
         super.onCleared()
-        externalScope.launch {
-            repo.callWhenLeavePage()
             // todo call api when leave this page
-        }
     }
 }

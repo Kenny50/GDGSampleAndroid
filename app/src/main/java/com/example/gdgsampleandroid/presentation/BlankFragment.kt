@@ -50,11 +50,7 @@ class BlankFragment @Inject constructor(
 
         binding.edInput.doOnTextChanged { text, start, before, count ->
             //todo when typing event stop for 0.5 seconds, request api
-            job?.cancel()
-            job = lifecycleScope.launch {
-                delay(500)
-                viewModel.getString(text.toString())
-            }
+
         }
 
     }
